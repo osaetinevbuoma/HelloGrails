@@ -1,0 +1,78 @@
+2014-12-11 22:07:08,963 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+tekEvent.toString() == "Groovy One, San Francisco"
+|        |          |
+|        |          false
+|        |          27 differences (15% similarity)
+|        |          (c-)o(m.tekda)y(s.T)e(kEve)n(t) (: (u)n(saved))
+|        |          (Gr)o(ov-----)y( On)e(, Sa)n(-) (Fra-)n(cisco-)
+|        com.tekdays.TekEvent : (unsaved)
+com.tekdays.TekEvent : (unsaved)
+
+	at com.tekdays.TekEventSpec.test toString(TekEventSpec.groovy:23)
+2014-12-11 22:07:09,154 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+tekEvent.toString() == "Groovy One, San Francisco"
+|        |          |
+|        |          false
+|        |          27 differences (15% similarity)
+|        |          (c-)o(m.tekda)y(s.T)e(kEve)n(t) (: (u)n(saved))
+|        |          (Gr)o(ov-----)y( On)e(, Sa)n(-) (Fra-)n(cisco-)
+|        com.tekdays.TekEvent : (unsaved)
+com.tekdays.TekEvent : (unsaved)
+
+	at com.tekdays.TekEventSpec.test toString(TekEventSpec.groovy:23)
+2014-12-11 22:07:09,192 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+tekEvent.toString() == "Groovy One, San Francisco"
+|        |          |
+|        |          false
+|        |          27 differences (15% similarity)
+|        |          (c-)o(m.tekda)y(s.T)e(kEve)n(t) (: (u)n(saved))
+|        |          (Gr)o(ov-----)y( On)e(, Sa)n(-) (Fra-)n(cisco-)
+|        com.tekdays.TekEvent : (unsaved)
+com.tekdays.TekEvent : (unsaved)
+
+	at com.tekdays.TekEventSpec.test toString(TekEventSpec.groovy:23)
+2014-12-11 22:07:09,192 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+tekEvent.toString() == "Groovy One, San Francisco"
+|        |          |
+|        |          false
+|        |          27 differences (15% similarity)
+|        |          (c-)o(m.tekda)y(s.T)e(kEve)n(t) (: (u)n(saved))
+|        |          (Gr)o(ov-----)y( On)e(, Sa)n(-) (Fra-)n(cisco-)
+|        com.tekdays.TekEvent : (unsaved)
+com.tekdays.TekEvent : (unsaved)
+
+	at com.tekdays.TekEventSpec.test toString(TekEventSpec.groovy:23)
+2014-12-11 22:07:09,304 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+tekEvent.toString() == "Groovy One, San Francisco"
+|        |          |
+|        |          false
+|        |          27 differences (15% similarity)
+|        |          (c-)o(m.tekda)y(s.T)e(kEve)n(t) (: (u)n(saved))
+|        |          (Gr)o(ov-----)y( On)e(, Sa)n(-) (Fra-)n(cisco-)
+|        com.tekdays.TekEvent : (unsaved)
+com.tekdays.TekEvent : (unsaved)
+
+	at com.tekdays.TekEventSpec.test toString(TekEventSpec.groovy:23)
+2014-12-11 22:07:09,304 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+tekEvent.toString() == "Groovy One, San Francisco"
+|        |          |
+|        |          false
+|        |          27 differences (15% similarity)
+|        |          (c-)o(m.tekda)y(s.T)e(kEve)n(t) (: (u)n(saved))
+|        |          (Gr)o(ov-----)y( On)e(, Sa)n(-) (Fra-)n(cisco-)
+|        com.tekdays.TekEvent : (unsaved)
+com.tekdays.TekEvent : (unsaved)
+
+	at com.tekdays.TekEventSpec.test toString(TekEventSpec.groovy:23)
