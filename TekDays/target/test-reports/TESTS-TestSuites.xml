@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites />
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="OSA-PC" id="0" name="TekEventSpec" package="com.tekdays" tests="2" time="5.233" timestamp="2014-12-12T13:41:50">
+      <properties />
+
+      <testcase classname="com.tekdays.TekEventSpec" name="test toString" time="5.107" />
+
+      <testcase classname="com.tekdays.TekEventSpec" name="test description size" time="0.063" />
+
+      <system-out><![CDATA[--Output from test toString--
+--Output from test description size--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from test toString--
+--Output from test description size--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
