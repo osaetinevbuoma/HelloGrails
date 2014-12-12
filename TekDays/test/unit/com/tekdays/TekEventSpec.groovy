@@ -17,7 +17,7 @@ class TekEventSpec extends Specification {
 
     void "test toString"() {
         when: "a tekEvent has a name and city"
-            def tekEvent = new TekEvent(name: "Groovy One", city: "San Francisco", organizer: "John Doe")
+            def tekEvent = new TekEvent(name: "Groovy One", city: "San Francisco", organizer: [fullName: "John Doe"] as TekUser)
             
         then: "the toString method will combine them"
             tekEvent.toString() == "Groovy One, San Francisco"
@@ -29,5 +29,13 @@ class TekEventSpec extends Specification {
             
         then: "the length must be less than or equal to 5000"
             tekEvent.description.size() <= 5000
+    }
+
+    void "test user is instance of event"() {
+        when: "a tekEvent is created"
+            def tekEvent = new TekEvent(organizer: [fullName: "John Doe"] as TekUser);
+
+        then: "the tekEvent organizer must be an instance of TekUser"
+            tekEvent.organizer instaceOf TekUser
     }
 }
