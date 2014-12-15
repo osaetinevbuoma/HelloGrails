@@ -764,3 +764,329 @@ Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
 	... 4 more
+2014-12-15 12:12:23,720 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:336)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1457)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:71)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	... 25 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:246)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:395)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1317)
+	... 31 more
+2014-12-15 12:12:23,752 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1457)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:71)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:246)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:395)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1317)
+	... 31 more
+2014-12-15 12:12:23,752 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:246)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:395)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1317)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:452)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1457)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:71)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-12-15 12:12:23,753 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,753 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,754 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,754 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-12-15 12:12:23,754 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,928 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,929 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,929 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-12-15 12:12:23,929 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,929 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,929 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,930 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-12-15 12:12:23,930 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,930 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,930 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
+2014-12-15 12:12:23,930 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-12-15 12:12:23,930 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'grailsApplication' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Cannot resolve reference to bean 'grailsResourceLoader' while setting bean property 'grailsResourceLoader'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean] for bean with name 'grailsResourceLoader' defined in ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	... 4 more
+Caused by: java.lang.ClassNotFoundException: org.codehaus.groovy.grails.commons.GrailsResourceLoaderFactoryBean
+	at org.grails.plugins.tomcat.ParentDelegatingClassLoader.findClass(ParentDelegatingClassLoader.java:59)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	... 4 more
