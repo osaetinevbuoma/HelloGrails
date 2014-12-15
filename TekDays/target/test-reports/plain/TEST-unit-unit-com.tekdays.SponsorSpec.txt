@@ -1,0 +1,10 @@
+Testsuite: com.tekdays.SponsorSpec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.143 sec
+------------- Standard Output ---------------
+--Output from test creating a Sponsor--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test creating a Sponsor--
+------------- ---------------- ---------------
+
+Testcase: test creating a Sponsor took 0.127 sec

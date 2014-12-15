@@ -1,0 +1,10 @@
+Testsuite: com.tekdays.TekUserSpec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.124 sec
+------------- Standard Output ---------------
+--Output from test bio max size--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test bio max size--
+------------- ---------------- ---------------
+
+Testcase: test bio max size took 0.115 sec

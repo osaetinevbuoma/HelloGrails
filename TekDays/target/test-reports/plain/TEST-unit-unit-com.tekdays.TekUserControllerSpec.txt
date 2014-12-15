@@ -1,0 +1,55 @@
+Testsuite: com.tekdays.TekUserControllerSpec
+Tests run: 7, Failures: 1, Errors: 2, Time elapsed: 0.747 sec
+------------- Standard Output ---------------
+--Output from Test the index action returns the correct model--
+--Output from Test the create action returns the correct model--
+--Output from Test the save action correctly persists an instance--
+--Output from Test that the show action returns the correct model--
+--Output from Test that the edit action returns the correct model--
+--Output from Test the update action performs an update on a valid domain instance--
+--Output from Test that the delete action deletes an instance if it exists--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from Test the index action returns the correct model--
+--Output from Test the create action returns the correct model--
+--Output from Test the save action correctly persists an instance--
+--Output from Test that the show action returns the correct model--
+--Output from Test that the edit action returns the correct model--
+--Output from Test the update action performs an update on a valid domain instance--
+--Output from Test that the delete action deletes an instance if it exists--
+------------- ---------------- ---------------
+
+Testcase: Test the index action returns the correct model took 0.32 sec
+Testcase: Test the create action returns the correct model took 0.041 sec
+Testcase: Test the save action correctly persists an instance took 0.109 sec
+	Caused an ERROR
+Cannot redirect for object [null] it is not a domain or has no identifier. Use an explicit redirect instead 
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.CannotRedirectException: Cannot redirect for object [null] it is not a domain or has no identifier. Use an explicit redirect instead 
+	at com.tekdays.TekUserController.tt__save_closure9_closure14(TekUserController.groovy:43)
+	at com.tekdays.TekUserController.$tt__save(TekUserController.groovy:40)
+	at com.tekdays.TekUserControllerSpec.Test the save action correctly persists an instance(TekUserControllerSpec.groovy:54)
+
+Testcase: Test that the show action returns the correct model took 0.054 sec
+Testcase: Test that the edit action returns the correct model took 0.044 sec
+Testcase: Test the update action performs an update on a valid domain instance took 0.093 sec
+	Caused an ERROR
+Cannot get property 'id' on null object
+java.lang.NullPointerException: Cannot get property 'id' on null object
+	at com.tekdays.TekUserControllerSpec.Test the update action performs an update on a valid domain instance(TekUserControllerSpec.groovy:122)
+
+Testcase: Test that the delete action deletes an instance if it exists took 0.049 sec
+	FAILED
+Condition not satisfied:
+
+TekUser.count() == 1
+        |       |
+        0       false
+
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+TekUser.count() == 1
+        |       |
+        0       false
+
+	at com.tekdays.TekUserControllerSpec.Test that the delete action deletes an instance if it exists(TekUserControllerSpec.groovy:142)
+

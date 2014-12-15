@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="OSA-PC" name="com.tekdays.SponsorSpec" tests="1" time="0.143" timestamp="2014-12-15T13:36:41">
+  <properties />
+  <testcase classname="com.tekdays.SponsorSpec" name="test creating a Sponsor" time="0.127" />
+  <system-out><![CDATA[--Output from test creating a Sponsor--
+]]></system-out>
+  <system-err><![CDATA[--Output from test creating a Sponsor--
+]]></system-err>
+</testsuite>
