@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="OSA-PC" name="com.tekdays.TekUserSpec" tests="1" time="0.124" timestamp="2014-12-15T13:36:44">
+  <properties />
+  <testcase classname="com.tekdays.TekUserSpec" name="test bio max size" time="0.115" />
+  <system-out><![CDATA[--Output from test bio max size--
+]]></system-out>
+  <system-err><![CDATA[--Output from test bio max size--
+]]></system-err>
+</testsuite>

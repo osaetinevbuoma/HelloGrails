@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="OSA-PC" name="com.tekdays.TaskServiceIntegrationSpec" tests="1" time="0.503" timestamp="2014-12-15T13:37:05">
+  <properties />
+  <testcase classname="com.tekdays.TaskServiceIntegrationSpec" name="test addDefaultTasks" time="0.496" />
+  <system-out><![CDATA[--Output from test addDefaultTasks--
+]]></system-out>
+  <system-err><![CDATA[--Output from test addDefaultTasks--
+]]></system-err>
+</testsuite>

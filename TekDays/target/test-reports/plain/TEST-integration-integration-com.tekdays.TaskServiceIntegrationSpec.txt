@@ -1,0 +1,10 @@
+Testsuite: com.tekdays.TaskServiceIntegrationSpec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.503 sec
+------------- Standard Output ---------------
+--Output from test addDefaultTasks--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test addDefaultTasks--
+------------- ---------------- ---------------
+
+Testcase: test addDefaultTasks took 0.496 sec
