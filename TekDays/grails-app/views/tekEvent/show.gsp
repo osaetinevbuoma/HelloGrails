@@ -134,7 +134,10 @@
 				<li class="fieldcontain">
 					<span id="respondents-label" class="property-label"><g:message code="tekEvent.respondents.label" default="Respondents" /></span>
 					
-						<span class="property-value" aria-labelledby="respondents-label"><g:fieldValue bean="${tekEventInstance}" field="respondents"/></span>
+						<!--<span class="property-value" aria-labelledby="respondents-label"><g:fieldValue bean="${tekEventInstance}" field="respondents"/></span>-->
+                    <g:each in="${tekEventInstance.respondents}" var="r">
+                        <span class="property-value" aria-labelledby="respondents-label">${r.encodeAsHTML()}</span>
+                    </g:each>
 					
 				</li>
 				</g:if>

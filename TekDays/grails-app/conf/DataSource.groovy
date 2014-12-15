@@ -2,6 +2,7 @@ dataSource {
     pooled = true
     jmxExport = true
     driverClassName = "org.h2.Driver"
+//    driverClassName = "com.mysql.jdbc.Driver"
     username = "sa"
     password = ""
 }
@@ -19,7 +20,9 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+//            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+//            url = "jdbc:mysql://localhost:3306/tekdays"
         }
     }
     test {
