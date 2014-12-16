@@ -4,6 +4,7 @@ import com.tekdays.TekEvent
 import com.tekdays.TekUser
 import com.tekdays.Sponsor
 import com.tekdays.Sponsorship
+import com.tekdays.TekMessage
 
 class BootStrap {
 
@@ -38,6 +39,24 @@ class BootStrap {
                 good hand around the farm. If he can't program it he
                 can plow it!
             """
+            ).save()
+
+            def user3 = new TekUser(
+                fullName: "Sarah Martin",
+                userName: 'sarah',
+                password: '54321',
+                email: 'sarah@martinworld.com',
+                website: 'www.martinworld.com',
+                bio: 'Web designer and Grails afficianado.'
+            ).save()
+
+            def user4 = new TekUser(
+                fullName: 'Bill Smith',
+                userName: 'Mr_Bill',
+                password: '12345',
+                email: 'mrbill@email.com',
+                website: 'www.mrbillswebsite.com',
+                bio: 'Software developer, claymation artist.'
             ).save()
             
             /**
@@ -93,22 +112,10 @@ class BootStrap {
              * Add volunteers for events
              */
             def g1 = TekEvent.findByName("Gateway Code Camp")
-            g1.addToVolunteers(new TekUser(
-                    fullName: "Sarah Martin",
-                    userName: 'sarah',
-                    password: '54321',
-                    email: 'sarah@martinworld.com',
-                    website: 'www.martinworld.com',
-                    bio: 'Web designer and Grails afficianado.'
-                ))
-            g1.addToVolunteers(new TekUser(
-                    fullName: 'Bill Smith',
-                    userName: 'Mr_Bill',
-                    password: '12345',
-                    email: 'mrbill@email.com',
-                    website: 'www.mrbillswebsite.com',
-                    bio: 'Software developer, claymation artist.'
-                ))
+
+            g1.addToVolunteers(user3)
+            g1.addToVolunteers(user4)
+
             g1.addToRespondents('ben@grailsmail.com')
             g1.addToRespondents('zachary@linuxgurus.org')
             g1.addToRespondents('solomon@bootstrapwelding.com')
@@ -143,6 +150,98 @@ class BootStrap {
                 sponsor: s2,
                 contributionType: 'Venue',
                 description: 'Will be paying for the Moscone').save()
+
+            /**
+             * TekMessage
+             */
+            def parent1 = new TekMessage(
+                subject: "Lorem ipsum dolor sit amet",
+                content: """
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                """,
+                event: event1,
+                author: TekUser.findByFullName("John Doe")
+            ).save()
+
+            def parent2 = new TekMessage(
+                subject: "Sed ut perspiciatis unde omnis iste natus error",
+                content: """
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos 
+                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
+                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi 
+                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel 
+                    illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                """,
+                event: event2,
+                author: TekUser.findByFullName("Bill Smith")
+            ).save()
+
+            def parent3 = new TekMessage(
+                subject: "Lorem ipsum dolor sit amet",
+                content: """
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos 
+                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
+                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi 
+                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel 
+                    illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                """,
+                event: event1,
+                author: TekUser.findByFullName("John Deere")
+            ).save()
+
+            def parent4 = new TekMessage(
+                subject: "Sed ut perspiciatis unde omnis iste natus error",
+                content: """
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                """,
+                event: event2,
+                author: TekUser.findByFullName("Sarah Martin")
+            ).save()
+
+            def child1 = new TekMessage(
+                subject: "Lorem ipsum dolor sit amet",
+                content: """
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                """,
+                event: event1,
+                author: TekUser.findByFullName("Bill Smith"),
+                parent: parent1
+            ).save()
+
+            def child2 = new TekMessage(
+                subject: "Lorem ipsum dolor sit amet",
+                content: """
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos 
+                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
+                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi 
+                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel 
+                    illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                """,
+                event: event1,
+                author: TekUser.findByFullName("Sarah Martin"),
+                parent: parent1
+            ).save()
         }
     }
 

@@ -14,5 +14,6 @@ class TekMessage {
     	content blank: false, maxSize: 2000
     	parent nullable: true
     	author nullable: false
+    	event nullable: false
     }
 }
