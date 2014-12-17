@@ -26,7 +26,7 @@
 		<link>
 			<name>.link_to_grails_plugins</name>
 			<type>2</type>
-			<location>C:/Users/USER/Documents/Osas/Learning/HelloGrails/TekDays/target/work/plugins</location>
+			<location>/home/oevbuoma/Documents/workspace/java/web/HelloGrails/TekDays/target/work/plugins</location>
 		</link>
 	</linkedResources>
 </projectDescription>
