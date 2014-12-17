@@ -4,7 +4,8 @@
 		<li class="fieldcontain">
 			<span id="subject-label" class="property-label"><g:message code="tekMessage.subject.label" default="Subject" /></span>
 			<span class="property-value" aria-labelledby="subject-label">
-			<g:fieldValue bean="${tekMessageInstance}" field="subject"/></span>
+				<g:fieldValue bean="${tekMessageInstance}" field="subject"/>
+			</span>
 		</li>
 		</g:if>
 
@@ -12,7 +13,8 @@
 		<li class="fieldcontain">
 			<span id="content-label" class="property-label"><g:message code="tekMessage.content.label" default="Content" /></span>
 			<span class="property-value" aria-labelledby="content-label">
-			<g:fieldValue bean="${tekMessageInstance}" field="content"/></span>
+				<g:fieldValue bean="${tekMessageInstance}" field="content"/>
+			</span>
 		</li>
 		</g:if>
 

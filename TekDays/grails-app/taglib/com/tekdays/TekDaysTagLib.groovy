@@ -21,4 +21,21 @@ class TekDaysTagLib {
     		if (children) processMessages(children, indent + 1)
     	}
     }
+	
+	def loginToggle = {
+		out << "<div style='margin: 15px 0 40px;'>"
+		
+		if (request.getSession(false) && session.user) {
+			out << "<span style='float: left; margin-left: 15px;'>"
+			out << "Welcome ${session.user}"
+			out << "</span><span style='float:right; margin-right: 15px;'>"
+			out << "<a href='${createLink(controller: 'tekUser', action: 'logout')}'>Logout</a></span>"
+		} else {
+			out << "<span style='float:right; margin-right:10px;'>"
+			out << "<a href='${createLink(controller: 'tekUser', action: 'login')}'>Login</a>"
+			out << "</span>"
+		}
+		
+		out << "</div><br />"
+	}
 }
