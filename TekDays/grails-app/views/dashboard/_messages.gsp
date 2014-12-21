@@ -1,4 +1,4 @@
-<h3>Forum Messages</h3>
+<h3>Forum Messages</h3> <br />
 <table>
 	<thead>
 		<tr>

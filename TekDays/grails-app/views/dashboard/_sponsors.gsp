@@ -1,4 +1,4 @@
-<h3>Sponsors</h3>
+<h3>Sponsors</h3> <br />
 <table>
 	<thead>
 		<tr>
