@@ -8,13 +8,13 @@ class TekEvent {
     Date startDate
     Date endDate
     String description
+	
+	String toString() {
+		"$name, $city"
+	}
 
+	static searchable = true
     static hasMany = [volunteers: TekUser, respondents: String, sponsorships: Sponsorship, tasks: Task, messages: TekMessage]
-    
-    String toString() {
-        "$name, $city"
-    }
-
     static constraints = {
         name()
         city()

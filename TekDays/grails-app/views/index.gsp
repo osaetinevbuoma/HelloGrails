@@ -14,6 +14,18 @@
 			</p>
 		</div>
 		
+		<div id="homeSearch">
+			<g:form controller="tekEvent" action="search">
+				<label>Search: </label>
+				<input type="text" id="query" name="query" />
+				<button>Go</button>
+			</g:form>
+		</div>
+		
+		<g:organizerEvents />
+		
+		<g:volunteerEvents />
+		
 		<div class="homeCell">
 			<h3>Find a Tek Event</h3>
 			<p>
