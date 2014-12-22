@@ -75,7 +75,8 @@ class BootStrap {
                             and tech! Stay sharp! Stay at the top of your
                             game! But, don't stay home! Come an join us
                             this fall for the first annual Gateway Code
-                            Camp."""
+                            Camp.""",
+				nickname: "GatewayCode"
             )
             
             if (!event1.save()) {

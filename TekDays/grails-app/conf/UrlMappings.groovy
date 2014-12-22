@@ -9,5 +9,10 @@ class UrlMappings {
 
         "/"(view:"/index")
         "500"(view:'/error')
+		
+		/*name tek_days_event: "/events/$nickname" {
+			controller = "tekEvent"
+			action = "show"
+		}*/
 	}
 }

@@ -41,6 +41,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${tekEventInstance.id}">${fieldValue(bean: tekEventInstance, field: "name")}</g:link></td>
+						<!-- <td><a href="/TekDays/events/${ tekEventInstance.nickname }">${fieldValue(bean: tekEventInstance, field: "name")}</a></td>-->
+						<!-- <td><g:link mapping="tek_days_event" params="[nickname: tekEventInstance.nickname]">${fieldValue(bean: tekEventInstance, field: "name")}</g:link></td> -->
 					
 						<td>${fieldValue(bean: tekEventInstance, field: "city")}</td>
 					

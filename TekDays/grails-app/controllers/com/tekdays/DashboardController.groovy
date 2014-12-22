@@ -1,6 +1,7 @@
 package com.tekdays
 
 class DashboardController {
+	def twitter4jService
 
     def index() { }
     
@@ -22,5 +23,12 @@ class DashboardController {
             flash.message = "No event was found with an id of ${params.id}"
             redirect controller: "tekEvent", action: "index"
         }
-    } 
+    }
+	
+	def tweet() {
+		def event = TekEvent.get(params.id)
+		if (event) twitter4jService.updateStatus(params.status)
+		
+		redirect(action: dashbord, id: event.id)
+	} 
 }

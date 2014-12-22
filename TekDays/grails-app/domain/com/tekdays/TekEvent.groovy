@@ -8,6 +8,7 @@ class TekEvent {
     Date startDate
     Date endDate
     String description
+	String nickname
 	
 	String toString() {
 		"$name, $city"
@@ -19,6 +20,7 @@ class TekEvent {
         name()
         city()
         description(maxSize: 5000)
+		nickname nullable: true, unique: true
         organizer()
         venue()
         startDate()

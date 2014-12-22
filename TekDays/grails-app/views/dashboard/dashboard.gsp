@@ -32,5 +32,9 @@
 		<div id="sponsors" style="margin: 10px 10px 10px 10px">
 			<g:render template="sponsors" model="['sponsorships': sponsorships]" />
 		</div>
+		
+		<div id="twitter" style="margin: 10px 10px 10px 10px">
+			<g:render template="twitter" model="['event': event]" />
+		</div>
 	</body>
 </html>
